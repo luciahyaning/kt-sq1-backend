@@ -13,9 +13,10 @@ defmodule ShipmentApiWeb.Resolvers.DriverResolver do
     Drivers.create_driver(input)
   end
 
-  # def update_driver(_,%{input: input},_) do
-  #     Accounts.create_driver(input)
-  # end
+  def update_driver(_, %{id: id, input: input}, _) do
+    driver_to_update = Drivers.get_driver!(id)
+    Drivers.update_driver(driver_to_update, input)
+  end
 
   def delete_driver(_, %{id: id}, _) do
     driver_to_delete = Drivers.get_driver!(id)

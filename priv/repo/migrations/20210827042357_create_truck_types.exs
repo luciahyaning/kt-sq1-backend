@@ -3,7 +3,7 @@ defmodule ShipmentApi.Repo.Migrations.CreateTruckTypes do
 
   def change do
     create table(:truck_types) do
-      add :name, :string
+      add :name, :string, null: false
 
       timestamps()
     end

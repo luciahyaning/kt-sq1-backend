@@ -3,7 +3,7 @@ use Mix.Config
 # Configure your database
 config :shipment_api, ShipmentApi.Repo,
   username: "postgres",
-  password: "postgres",
+  password: "devmcrrlocalpass123",
   database: "shipment_api_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,

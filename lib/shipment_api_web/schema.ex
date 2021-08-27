@@ -64,17 +64,15 @@ defmodule ShipmentApiWeb.Schema do
     end
 
     @desc "Create a new truck"
-        field :create_truck, type: :truck_type do
-        arg(:input, non_null(:truck_input_type))
-        resolve(&Resolvers.TruckResolver.create_truck/3)
+    field :create_truck, type: :truck_type do
+      arg(:input, non_null(:truck_input_type))
+      resolve(&Resolvers.TruckResolver.create_truck/3)
     end
 
     @desc "Delete a truck"
-        field :delete_truck, type: :truck_type do
-        arg(:id, non_null(:id))
-        resolve(&Resolvers.TruckResolver.delete_truck/3)
+    field :delete_truck, type: :truck_type do
+      arg(:id, non_null(:id))
+      resolve(&Resolvers.TruckResolver.delete_truck/3)
     end
-
   end
-
 end

@@ -31,8 +31,6 @@ defmodule ShipmentApi.Trucks.Truck do
       :type_id,
       :plate_type,
       :production_year,
-      :stnk,
-      :kir,
       :status
     ])
   end

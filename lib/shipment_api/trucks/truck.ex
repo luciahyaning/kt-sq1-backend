@@ -17,7 +17,23 @@ defmodule ShipmentApi.Trucks.Truck do
   @doc false
   def changeset(truck, attrs) do
     truck
-    |> cast(attrs, [:license_number, :type_id, :plate_type, :production_year, :stnk, :kir, :status])
-    |> validate_required([:license_number, :type_id, :plate_type, :production_year, :stnk, :kir, :status])
+    |> cast(attrs, [
+      :license_number,
+      :type_id,
+      :plate_type,
+      :production_year,
+      :stnk,
+      :kir,
+      :status
+    ])
+    |> validate_required([
+      :license_number,
+      :type_id,
+      :plate_type,
+      :production_year,
+      :stnk,
+      :kir,
+      :status
+    ])
   end
 end

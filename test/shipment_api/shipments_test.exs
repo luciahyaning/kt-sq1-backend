@@ -6,8 +6,18 @@ defmodule ShipmentApi.ShipmentsTest do
   describe "shipments" do
     alias ShipmentApi.Shipments.Shipment
 
-    @valid_attrs %{destination: "some destination", loading_date: "some loading_date", origin: "some origin", shipment_no: "some shipment_no"}
-    @update_attrs %{destination: "some updated destination", loading_date: "some updated loading_date", origin: "some updated origin", shipment_no: "some updated shipment_no"}
+    @valid_attrs %{
+      destination: "some destination",
+      loading_date: "some loading_date",
+      origin: "some origin",
+      shipment_no: "some shipment_no"
+    }
+    @update_attrs %{
+      destination: "some updated destination",
+      loading_date: "some updated loading_date",
+      origin: "some updated origin",
+      shipment_no: "some updated shipment_no"
+    }
     @invalid_attrs %{destination: nil, loading_date: nil, origin: nil, shipment_no: nil}
 
     def shipment_fixture(attrs \\ %{}) do

@@ -20,6 +20,14 @@ defmodule ShipmentApiWeb.Schema do
       # middleware(Middleware.Authorize, :any)
       resolve(&Resolvers.DriverResolver.driver/3)
     end
+
+    ############################################
+
+    @desc "Get a list of all shipment"
+    field :shipment, list_of(:shipment_type) do
+      # Resolve
+      resolve(&Resolvers.ShipmentResolver.shipments/3)
+    end
   end
 
   mutation do

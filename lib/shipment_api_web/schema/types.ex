@@ -4,4 +4,5 @@ defmodule ShipmentApiWeb.Schema.Types do
   alias ShipmentApiWeb.Schema.Types
 
   import_types(Types.Drivertype)
+  import_types(Types.ShipmentType)
 end

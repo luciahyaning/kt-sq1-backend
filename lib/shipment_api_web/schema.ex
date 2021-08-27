@@ -29,11 +29,19 @@ defmodule ShipmentApiWeb.Schema do
       resolve(&Resolvers.DriverResolver.create_driver/3)
     end
 
-    # @desc "Update a driver"
-    # field :create_driver, type: :driver_type do
-    #     arg :input, non_null(:driver_input_type)
-    #     resolve(&Resolvers.DriverResolver.create_driver/3)
-    # end
+    @desc "Update a driver"
+    field :update_driver, type: :driver_type do
+      arg :input, non_null(:driver_update_type)
+      arg(:id, non_null(:id))
+      resolve(&Resolvers.DriverResolver.update_driver/3)
+    end
+    
+    @desc "Update a driver status"
+    field :update_driver_status, type: :driver_type do
+      arg(:input, non_null(:driver_status_update_type))
+      arg(:id, non_null(:id))
+      resolve(&Resolvers.DriverResolver.update_driver/3)
+    end
 
     @desc "Delete a driver"
     field :delete_driver, type: :driver_type do

@@ -10,17 +10,22 @@
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
 
-Repo.insert! %users{id: 1, role: "Transporter"}
-Repo.insert! %users{id: 2, role: "Shipper"}
+alias ShipmentApi.Repo
+alias ShipmentApi.Accounts.User
+alias ShipmentApi.TruckTypes.TruckType
+alias ShipmentApi.ShipmentStatuses.ShipmentStatus
 
-Repo.insert! %truck_types{id: 1, name: "Tronton"}
-Repo.insert! %truck_types{id: 2, name: "Container"}
-Repo.insert! %truck_types{id: 3, name: "CDE"}
+# Repo.insert! %User{role: True}
+# Repo.insert! %User{role: False}
 
-Repo.insert! %shipment_status{id: 1, name: "Assigned"}
-Repo.insert! %shipment_status{id: 2, name: "Allocated"}
-Repo.insert! %shipment_status{id: 3, name: "Ongoing to Origin"}
-Repo.insert! %shipment_status{id: 4, name: "At Origin"}
-Repo.insert! %shipment_status{id: 5, name: "Ongoing to Destination"}
-Repo.insert! %shipment_status{id: 6, name: "At Destination”}
-Repo.insert! %shipment_status{id: 7, name: "Completed"}
+Repo.insert! %TruckType{name: "Tronton"}
+Repo.insert! %TruckType{name: "Container"}
+Repo.insert! %TruckType{name: "CDE"}
+
+Repo.insert! %ShipmentStatus{title: "Assigned"}
+Repo.insert! %ShipmentStatus{title: "Allocated"}
+Repo.insert! %ShipmentStatus{title: "Ongoing to Origin"}
+Repo.insert! %ShipmentStatus{title: "At Origin"}
+Repo.insert! %ShipmentStatus{title: "Ongoing to Destination"}
+Repo.insert! %ShipmentStatus{title: "At Destination"}
+Repo.insert! %ShipmentStatus{title: "Completed"}

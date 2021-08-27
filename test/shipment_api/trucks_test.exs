@@ -6,9 +6,33 @@ defmodule ShipmentApi.TrucksTest do
   describe "truck" do
     alias ShipmentApi.Trucks.Truck
 
-    @valid_attrs %{kir: "some kir", license_number: "some license_number", plate_type: "some plate_type", production_year: 42, status: true, stnk: "some stnk", type: "some type"}
-    @update_attrs %{kir: "some updated kir", license_number: "some updated license_number", plate_type: "some updated plate_type", production_year: 43, status: false, stnk: "some updated stnk", type: "some updated type"}
-    @invalid_attrs %{kir: nil, license_number: nil, plate_type: nil, production_year: nil, status: nil, stnk: nil, type: nil}
+    @valid_attrs %{
+      kir: "some kir",
+      license_number: "some license_number",
+      plate_type: "some plate_type",
+      production_year: 42,
+      status: true,
+      stnk: "some stnk",
+      type: "some type"
+    }
+    @update_attrs %{
+      kir: "some updated kir",
+      license_number: "some updated license_number",
+      plate_type: "some updated plate_type",
+      production_year: 43,
+      status: false,
+      stnk: "some updated stnk",
+      type: "some updated type"
+    }
+    @invalid_attrs %{
+      kir: nil,
+      license_number: nil,
+      plate_type: nil,
+      production_year: nil,
+      status: nil,
+      stnk: nil,
+      type: nil
+    }
 
     def truck_fixture(attrs \\ %{}) do
       {:ok, truck} =

@@ -2,7 +2,7 @@ defmodule ShipmentApi.Drivers.Driver do
   use Ecto.Schema
   import Ecto.Changeset
 
-  schema "driver" do
+  schema "drivers" do
     field :id_card, :string
     field :license, :string
     field :name, :string

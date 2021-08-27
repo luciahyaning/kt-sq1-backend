@@ -50,7 +50,7 @@ defmodule ShipmentApi.MixProject do
       {:absinthe_plug, "~> 1.5"},
       {:absinthe_ecto, "~> 0.1.3"},
       {:guardian, "~> 2.0"},
-      {:cors_plug, "~> 2.0"},
+      {:cors_plug, "~> 2.0"}
     ]
   end
 

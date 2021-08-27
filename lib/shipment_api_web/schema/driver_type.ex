@@ -13,8 +13,8 @@ defmodule ShipmentApiWeb.Schema.Types.Drivertype do
   input_object :driver_input_type do
     field :name, non_null(:string)
     field :phone_number, non_null(:string)
-    field :id_card, non_null(:string)
-    field :license, non_null(:string)
-    field :status, non_null(:boolean)
+    field :id_card, :string
+    field :license, :string
+    field :status, :boolean
   end
 end

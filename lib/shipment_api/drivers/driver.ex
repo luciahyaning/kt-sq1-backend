@@ -16,6 +16,6 @@ defmodule ShipmentApi.Drivers.Driver do
   def changeset(driver, attrs) do
     driver
     |> cast(attrs, [:name, :phone_number, :id_card, :license, :status])
-    |> validate_required([:name, :phone_number, :id_card, :license, :status])
+    |> validate_required([:name, :phone_number])
   end
 end

@@ -2,14 +2,18 @@ defmodule ShipmentApi.Shipments.Shipment do
   use Ecto.Schema
   import Ecto.Changeset
 
+  alias ShipmentApi.Trucks.Truck
+  alias ShipmentApi.Drivers.Driver
+
   schema "shipments" do
     field :destination, :string
-    field :loading_date, :string
+    field :loading_date, :utc_datetime
     field :origin, :string
     field :shipment_no, :string
-    field :truck_id, :id
-    field :driver_id, :id
-    field :status_id, :id
+    field :status_id, :integer, default: 8
+
+    # belongs_to(:truck, Truck)
+    # belongs_to(:driver, Driver)
 
     timestamps()
   end

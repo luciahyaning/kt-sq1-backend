@@ -48,5 +48,14 @@ defmodule ShipmentApiWeb.Schema do
       arg(:id, non_null(:id))
       resolve(&Resolvers.DriverResolver.delete_driver/3)
     end
+
+    ############################################
+
+    @desc "Create a new shipment"
+    field :create_shipment, type: :shipment_type do
+      arg(:input, non_null(:shipment_input_type))
+      resolve(&Resolvers.ShipmentResolver.create_shipment/3)
+    end
+
   end
 end

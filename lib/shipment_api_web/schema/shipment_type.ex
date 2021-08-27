@@ -16,5 +16,6 @@ defmodule ShipmentApiWeb.Schema.Types.ShipmentType do
     field :shipment_no, non_null(:string)
     field :origin, non_null(:string)
     field :destination, non_null(:string)
+    field :loading_date, non_null(:string )
   end
 end

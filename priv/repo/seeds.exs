@@ -29,3 +29,4 @@ Repo.insert! %ShipmentStatus{title: "At Origin"}
 Repo.insert! %ShipmentStatus{title: "Ongoing to Destination"}
 Repo.insert! %ShipmentStatus{title: "At Destination"}
 Repo.insert! %ShipmentStatus{title: "Completed"}
+Repo.insert! %ShipmentStatus{title: "Created"}

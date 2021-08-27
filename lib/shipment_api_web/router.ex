@@ -10,6 +10,7 @@ defmodule ShipmentApiWeb.Router do
   end
 
   pipeline :api do
+    plug CORSPlug
     plug :accepts, ["json"]
   end
 
@@ -19,10 +20,11 @@ defmodule ShipmentApiWeb.Router do
     get "/", PageController, :index
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", ShipmentApiWeb do
-  #   pipe_through :api
-  # end
+  scope "/api" do
+    pipe_through :api
+
+    post "/uploads", ShipmentApiWeb.UploadController, :create
+  end
 
   # Enables LiveDashboard only for development
   #

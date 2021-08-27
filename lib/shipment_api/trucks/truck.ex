@@ -2,7 +2,7 @@ defmodule ShipmentApi.Trucks.Truck do
   use Ecto.Schema
   import Ecto.Changeset
 
-  schema "truck" do
+  schema "trucks" do
     field :kir, :string
     field :license_number, :string
     field :plate_type, Ecto.Enum, values: [:black, :yellow]

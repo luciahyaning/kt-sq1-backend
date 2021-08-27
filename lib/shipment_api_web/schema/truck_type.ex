@@ -1,11 +1,16 @@
 defmodule ShipmentApiWeb.Schema.Types.Trucktype do
   use Absinthe.Schema.Notation
+  
+  object :truck_types_type do
+    field :id, :id
+    field :name, :string
+  end
 
   object :truck_type do
     field :id, :id
     field :name, :string
     field :production_year, :integer
-    field :type_id, :integer
+    field :type, :truck_types_type
     field :plate_type, :string
     field :license_number, :string
     field :stnk, :string
@@ -23,4 +28,5 @@ defmodule ShipmentApiWeb.Schema.Types.Trucktype do
     field :kir, :string
     field :status, :boolean
   end
+
 end

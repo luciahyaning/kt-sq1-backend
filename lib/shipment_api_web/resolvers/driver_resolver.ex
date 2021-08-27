@@ -2,7 +2,7 @@ defmodule ShipmentApiWeb.Resolvers.DriverResolver do
     alias ShipmentApi.Drivers
 
     def drivers(_,_,_) do
-        {:ok, Drivers.list_drivers()}
+        {:ok, Drivers.list_driver()}
     end
 
     def get_user(_,%{id: id},_) do

@@ -7,6 +7,5 @@ defmodule ShipmentApi.Repo.Migrations.CreateTruckTypes do
 
       timestamps()
     end
-
   end
 end

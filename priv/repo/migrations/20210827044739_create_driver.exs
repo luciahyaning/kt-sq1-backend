@@ -11,6 +11,5 @@ defmodule ShipmentApi.Repo.Migrations.CreateDriver do
 
       timestamps()
     end
-
   end
 end

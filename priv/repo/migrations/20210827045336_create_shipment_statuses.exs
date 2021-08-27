@@ -7,6 +7,5 @@ defmodule ShipmentApi.Repo.Migrations.CreateShipmentStatuses do
 
       timestamps()
     end
-
   end
 end

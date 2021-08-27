@@ -1,20 +1,20 @@
 defmodule ShipmentApiWeb.Schema.Types.Drivertype do
-    use Absinthe.Schema.Notation
+  use Absinthe.Schema.Notation
 
-    object :driver_type do
-        field :id, :id
-        field :name, :string
-        field :phone_number, :string
-        field :id_card, :string
-        field :license, :string
-        field :status, :boolean, default_value: false
-    end
+  object :driver_type do
+    field :id, :id
+    field :name, :string
+    field :phone_number, :string
+    field :id_card, :string
+    field :license, :string
+    field :status, :boolean, default_value: false
+  end
 
-    input_object :driver_input_type do
-        field :name, non_null(:string)
-        field :phone_number, non_null(:string)
-        field :id_card, non_null(:string)
-        field :license, non_null(:string)
-        field :status, non_null(:boolean)
-    end
+  input_object :driver_input_type do
+    field :name, non_null(:string)
+    field :phone_number, non_null(:string)
+    field :id_card, non_null(:string)
+    field :license, non_null(:string)
+    field :status, non_null(:boolean)
+  end
 end

@@ -6,8 +6,20 @@ defmodule ShipmentApi.DriversTest do
   describe "driver" do
     alias ShipmentApi.Drivers.Driver
 
-    @valid_attrs %{id_card: "some id_card", license: "some license", name: "some name", phone_number: "some phone_number", status: true}
-    @update_attrs %{id_card: "some updated id_card", license: "some updated license", name: "some updated name", phone_number: "some updated phone_number", status: false}
+    @valid_attrs %{
+      id_card: "some id_card",
+      license: "some license",
+      name: "some name",
+      phone_number: "some phone_number",
+      status: true
+    }
+    @update_attrs %{
+      id_card: "some updated id_card",
+      license: "some updated license",
+      name: "some updated name",
+      phone_number: "some updated phone_number",
+      status: false
+    }
     @invalid_attrs %{id_card: nil, license: nil, name: nil, phone_number: nil, status: nil}
 
     def driver_fixture(attrs \\ %{}) do

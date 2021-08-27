@@ -10,6 +10,7 @@ defmodule ShipmentApiWeb.Router do
   end
 
   pipeline :api do
+    plug CORSPlug
     plug :accepts, ["json"]
   end
 
@@ -22,13 +23,12 @@ defmodule ShipmentApiWeb.Router do
   # Other scopes may use custom stacks.
   scope "/api" do
     pipe_through :api
-
-        forward "/graphql", Absinthe.Plug, schema: ShipmentApiWeb.Schema
+    post "/uploads", ShipmentApiWeb.UploadController, :create
+    forward "/graphql", Absinthe.Plug, schema: ShipmentApiWeb.Schema
 
     if Mix.env() == :dev do
       forward "/graphiql", Absinthe.Plug.GraphiQL, schema: ShipmentApiWeb.Schema
     end
-
   end
 
   # Enables LiveDashboard only for development

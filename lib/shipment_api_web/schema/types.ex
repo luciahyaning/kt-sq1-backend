@@ -1,7 +1,7 @@
 defmodule ShipmentApiWeb.Schema.Types do
-    use Absinthe.Schema.Notation
+  use Absinthe.Schema.Notation
 
-    alias ShipmentApiWeb.Schema.Types
+  alias ShipmentApiWeb.Schema.Types
 
-    import_types(Types.Drivertype)
+  import_types(Types.Drivertype)
 end

@@ -3,5 +3,13 @@ defmodule ShipmentApiWeb.Schema.Types do
 
   alias ShipmentApiWeb.Schema.Types
 
+  # import_types(Types.Usertype)
+  # import_types(Types.SessionType)
+
+  # import_types(Types.ListType)
+  # import_types(Types.TaskType)
+
   import_types(Types.Drivertype)
+  import_types(Types.Trucktype)
+  
 end

@@ -1,11 +1,11 @@
 defmodule ShipmentApiWeb.Resolvers.TruckResolver do
-  alias ShipmentApi.Drivers
+  alias ShipmentApi.Trucks
 
   def trucks(_, _, _) do
     {:ok, Trucks.list_truck()}
   end
 
-  def get_user(_, %{id: id}, _) do
+  def truck(_, %{id: id}, _) do
     {:ok, Trucks.get_truck!(id)}
   end
 

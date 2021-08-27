@@ -40,13 +40,19 @@ defmodule ShipmentApi.TruckTypesTest do
 
     test "update_truck_type/2 with valid data updates the truck_type" do
       truck_type = truck_type_fixture()
-      assert {:ok, %TruckType{} = truck_type} = TruckTypes.update_truck_type(truck_type, @update_attrs)
+
+      assert {:ok, %TruckType{} = truck_type} =
+               TruckTypes.update_truck_type(truck_type, @update_attrs)
+
       assert truck_type.name == "some updated name"
     end
 
     test "update_truck_type/2 with invalid data returns error changeset" do
       truck_type = truck_type_fixture()
-      assert {:error, %Ecto.Changeset{}} = TruckTypes.update_truck_type(truck_type, @invalid_attrs)
+
+      assert {:error, %Ecto.Changeset{}} =
+               TruckTypes.update_truck_type(truck_type, @invalid_attrs)
+
       assert truck_type == TruckTypes.get_truck_type!(truck_type.id)
     end
 

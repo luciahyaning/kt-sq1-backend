@@ -12,4 +12,5 @@ defmodule ShipmentApiWeb.Schema.Types do
   import_types(Types.Drivertype)
   import_types(Types.Trucktype)
 
+
 end

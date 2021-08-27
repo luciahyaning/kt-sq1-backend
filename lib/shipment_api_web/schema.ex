@@ -31,11 +31,11 @@ defmodule ShipmentApiWeb.Schema do
 
     @desc "Update a driver"
     field :update_driver, type: :driver_type do
-      arg :input, non_null(:driver_update_type)
+      arg(:input, non_null(:driver_update_type))
       arg(:id, non_null(:id))
       resolve(&Resolvers.DriverResolver.update_driver/3)
     end
-    
+
     @desc "Update a driver status"
     field :update_driver_status, type: :driver_type do
       arg(:input, non_null(:driver_status_update_type))

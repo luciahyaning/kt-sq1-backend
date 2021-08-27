@@ -4,7 +4,7 @@ defmodule ShipmentApi.Repo.Migrations.CreateTruck do
   def change do
     create table(:trucks) do
       add :license_number, :string, null: false
-      add :type, references(:truck_types), null: false
+      add :type_id, references(:truck_types, on_delete: :nothing), null: false
       add :plate_type, :string, null: false
       add :production_year, :integer
       add :stnk, :string, null: true
@@ -14,5 +14,6 @@ defmodule ShipmentApi.Repo.Migrations.CreateTruck do
       timestamps()
     end
 
+    create index(:trucks, [:type_id])
   end
 end
